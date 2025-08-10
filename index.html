@@ -1,24 +1,33 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Game Map</title>
+  <title>Lumi Game Map</title>
+
+  <!-- Local H5P CSS (no CDN) -->
   <link rel="stylesheet" href="vendor/h5p/h5p.css" />
+
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;padding:24px}
-    #h5p{max-width:980px;margin:0 auto}
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 24px; }
+    #h5p { max-width: 980px; margin: 0 auto; }
+    h1   { max-width: 980px; margin: 0 auto 16px; }
   </style>
 </head>
 <body>
-  <h1 style="max-width:980px;margin:0 auto 16px;">Lumi Game Map</h1>
+  <h1>Lumi Game Map</h1>
   <div id="h5p"></div>
+
+  <!-- Local H5P JS (no CDN) -->
   <script src="vendor/h5p/main.bundle.js"></script>
   <script>
-    new H5PStandalone.H5P(document.getElementById('h5p'),{
-      h5pJsonPath:'h5p-folder',
-      frameJs:'vendor/h5p/frame.bundle.js',
-      frameCss:'vendor/h5p/h5p.css'
+    // Build a base like "/Test-11/" so this works even if the repo name changes
+    const base = location.pathname.replace(/\/[^/]*$/, '/');
+
+    new H5PStandalone.H5P(document.getElementById('h5p'), {
+      h5pJsonPath: base + 'h5p-folder',      // -> e.g. "/Test-11/h5p-folder"
+      frameJs:  'vendor/h5p/frame.bundle.js',
+      frameCss: 'vendor/h5p/h5p.css'
     });
   </script>
 </body>
