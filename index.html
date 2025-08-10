@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Game Map</title>
+  <link rel="stylesheet" href="vendor/h5p/h5p.css" />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;padding:24px}
+    #h5p{max-width:980px;margin:0 auto}
+  </style>
+</head>
+<body>
+  <h1 style="max-width:980px;margin:0 auto 16px;">Lumi Game Map</h1>
+  <div id="h5p"></div>
+  <script src="vendor/h5p/main.bundle.js"></script>
+  <script>
+    new H5PStandalone.H5P(document.getElementById('h5p'),{
+      h5pJsonPath:'h5p-folder',
+      frameJs:'vendor/h5p/frame.bundle.js',
+      frameCss:'vendor/h5p/h5p.css'
+    });
+  </script>
+</body>
+</html>
