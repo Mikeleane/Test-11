@@ -1321,8 +1321,5 @@
                  "toolbarFallbackLabel":  "Game Map",
                  "enterFullscreen":  "Enter fullscreen mode",
                  "exitFullscreen":  "Exit fullscreen mode"
-             },
-    "startStages":  [
-                        null
-                    ]
+             }
 }
