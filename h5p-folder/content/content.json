@@ -18,30 +18,18 @@
                                                      },
                          "gamemap":  {
                                          "elements":  [
-                                                          {
-                                                              "id":  "1ebde6f2-5040-4228-9907-6da656b553c5",
-                                                              "label":  "Encinte La Maquina",
-                                                              "content":  {
-                                                                              "params":  {
-
-                                                                                         },
-                                                                              "dom":  {
-
-                                                                                      }
-                                                                          },
-                                                              "telemetry":  {
-                                                                                "x":  "16.96406558533943",
-                                                                                "y":  "8.042221663734606",
-                                                                                "width":  "4.375",
-                                                                                "height":  "7.777777927393747"
-                                                                            },
-                                                              "neighbors":  [
-                                                                                "1"
-                                                                            ],
-                                                              "canBeStartStage":  true,
-                                                              "time":  {
-
-                                                                       },
+                                                        {
+  "id": "1ebde6f2-5040-4228-9907-6da656b553c5",
+  "label": "Encinte La Maquina",
+  "userCanStart": true,
+  "openAtStart": true,
+  "content": { "params": {}, "dom": {} },
+  "telemetry": { ... },
+  "neighbors": ["1"],
+  "canBeStartStage": true,
+  "time": { ... }
+}
+,
                                                               "accessRestrictions":  {
                                                                                          "allOrAnyRestrictionSet":  "any",
                                                                                          "restrictionSetList":  [
