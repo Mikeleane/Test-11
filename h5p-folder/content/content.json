@@ -1209,7 +1209,7 @@
     "visual":  {
                    "stages":  {
                                   "colorStage":  "rgba(250, 223, 10, 0.7)",
-                                  "colorStageLocked":  "rgba(153, 0, 0, 0.7)",
+                                  "colorStageLocked":  false,
                                   "colorStageCleared":  "rgba(0, 130, 0, 0.7)",
                                   "showScoreStars":  "never"
                               },
@@ -1312,12 +1312,12 @@
                  "exerciseLabel":  ". Exercise for @stagelabel",
                  "stageButtonLabel":  "Stage: @stagelabel",
                  "adjacentStageLabel":  "Adjacent stage of @stagelabelOrigin: @stagelabelNeighbor",
-                 "locked":  "Locked",
+                 "locked":  false,
                  "cleared":  "Cleared",
                  "applicationInstructions":  "Use space or enter key to activate current stage. Use arrow keys to select adjacent stage. Use space or enter key on adjacent stage to navigate there.",
                  "applicationDescription":  "Map",
                  "movedToStage":  "Moved to @stagelabel",
-                 "stageUnlocked":  "Stage @stagelabel was unlocked.",
+                 "stageUnlocked":  false,
                  "toolbarFallbackLabel":  "Game Map",
                  "enterFullscreen":  "Enter fullscreen mode",
                  "exitFullscreen":  "Exit fullscreen mode"
