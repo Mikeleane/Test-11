@@ -10,25 +10,34 @@
 
   <style>
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 24px; }
-    #h5p { max-width: 980px; margin: 0 auto; }
-    h1   { max-width: 980px; margin: 0 auto 16px; }
+    #page, h1 { max-width: 980px; margin: 0 auto; }
+    h1 { margin-bottom: 16px; }
   </style>
 </head>
 <body>
-  <h1>Lumi Game Map</h1>
-  <div id="h5p"></div>
+  <div id="page">
+    <h1>Lumi Game Map</h1>
+    <div id="h5p"></div>
+  </div>
 
   <!-- Local H5P JS (no CDN) -->
   <script src="vendor/h5p/main.bundle.js"></script>
   <script>
-    // Build a base like "/Test-11/" so this works even if the repo name changes
-    const base = location.pathname.replace(/\/[^/]*$/, '/');
+    (function () {
+      // Works no matter what the repo is called (e.g. /Test-11/)
+      const base = location.pathname.replace(/\/[^/]*$/, '/');
 
-    new H5PStandalone.H5P(document.getElementById('h5p'), {
-      h5pJsonPath: base + 'h5p-folder',      // -> e.g. "/Test-11/h5p-folder"
-      frameJs:  'vendor/h5p/frame.bundle.js',
-      frameCss: 'vendor/h5p/h5p.css'
-    });
+      const opts = {
+        // Path that contains h5p.json + content/ + libraries/
+        h5pJsonPath: base + 'h5p-folder',
+        // Local frame assets
+        frameJs:  'vendor/h5p/frame.bundle.js',
+        frameCss: 'vendor/h5p/h5p.css'
+      };
+
+      console.log('Starting H5P with:', opts);
+      new H5PStandalone.H5P(document.getElementById('h5p'), opts);
+    })();
   </script>
 </body>
 </html>
