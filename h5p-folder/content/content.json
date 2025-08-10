@@ -1328,6 +1328,8 @@
                  "exitFullscreen":  "Exit fullscreen mode"
              },
     "params":  {
-
+                   "startStages":  [
+                                       "1ebde6f2-5040-4228-9907-6da656b553c5"
+                                   ]
                }
 }
